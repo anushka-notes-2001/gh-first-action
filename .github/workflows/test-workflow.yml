@@ -1,0 +1,33 @@
+name: First Workflow
+on: workflow_dispatch 
+jobs: 
+  test-one:
+    runs-on: ubuntu-latest
+    steps:
+     - name: checkout source code
+       uses: actions/checkout@v1
+
+     - name: Check build status 
+       run: |
+          pip install pytest
+          pytest test1.py
+  test-two:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout source code
+       uses: actions/checkout@v1
+
+      - name: Check build status 
+       run: |
+          pip install pytest
+          pytest test2.py
+  test-three:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout source code
+       uses: actions/checkout@v1
+
+      - name: Check build status 
+       run: |
+          pip install pytest
+          pytest test3.py
